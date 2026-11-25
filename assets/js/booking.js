@@ -13,8 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const slotInput = document.getElementById("time");
   document.querySelectorAll("[data-slot]").forEach((btn) => {
     btn.addEventListener("click", () => {
-      document.querySelectorAll("[data-slot]").forEach((b) => b.classList.remove("active"));
+      document.querySelectorAll("[data-slot]").forEach((b) => { b.classList.remove("active"); b.setAttribute("aria-pressed", "false"); });
       btn.classList.add("active");
+      btn.setAttribute("aria-pressed", "true");
       slotInput.value = btn.dataset.slot;
     });
   });

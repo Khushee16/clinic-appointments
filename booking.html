@@ -11,10 +11,11 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top py-3">
   <div class="container">
-    <a class="navbar-brand" href="index.html"><span class="logo-mark">🦷</span>BrightSmile</a>
+    <a class="navbar-brand" href="index.html"><span class="logo-mark" aria-hidden="true">🦷</span>BrightSmile</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -23,14 +24,14 @@
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="services.html">Services &amp; Pricing</a></li>
         <li class="nav-item"><a class="nav-link" href="doctors.html">Our Dentists</a></li>
-        <li class="nav-item"><a class="nav-link active" href="booking.html">Book a Visit</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="booking.html">Book a Visit</a></li>
         <li class="nav-item ms-lg-2"><a class="btn btn-teal btn-sm px-4 py-2" href="booking.html">Book Appointment</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<header class="hero py-5">
+<header class="hero py-5" id="main">
   <div class="container position-relative">
     <p class="section-kicker mb-1">Book a visit</p>
     <h1 class="display-5 fw-bold">Book your appointment in two minutes.</h1>
@@ -83,14 +84,15 @@
               <div class="col-md-6">
                 <label class="form-label fw-semibold">Time slot *</label>
                 <input type="hidden" id="time" name="time" value="">
-                <div class="d-flex flex-wrap gap-2" role="group" aria-label="Time slots">
-                  <button type="button" class="btn btn-outline-secondary slot-btn" data-slot="09:00">09:00</button>
-                  <button type="button" class="btn btn-outline-secondary slot-btn" data-slot="10:30">10:30</button>
-                  <button type="button" class="btn btn-outline-secondary slot-btn" data-slot="12:00">12:00</button>
-                  <button type="button" class="btn btn-outline-secondary slot-btn" data-slot="14:00">14:00</button>
-                  <button type="button" class="btn btn-outline-secondary slot-btn" data-slot="15:30">15:30</button>
-                  <button type="button" class="btn btn-outline-secondary slot-btn" data-slot="17:00">17:00</button>
-                  <button type="button" class="btn btn-outline-secondary slot-btn" data-slot="18:30">18:30</button>
+                <div class="d-flex flex-wrap gap-2" role="group" aria-label="Time slots" aria-describedby="slot-help">
+                  <p id="slot-help" class="form-text w-100 mb-1">Choose one time. Slots shown are demo availability.</p>
+                  <button type="button" class="btn btn-outline-secondary slot-btn" aria-pressed="false" data-slot="09:00">09:00</button>
+                  <button type="button" class="btn btn-outline-secondary slot-btn" aria-pressed="false" data-slot="10:30">10:30</button>
+                  <button type="button" class="btn btn-outline-secondary slot-btn" aria-pressed="false" data-slot="12:00">12:00</button>
+                  <button type="button" class="btn btn-outline-secondary slot-btn" aria-pressed="false" data-slot="14:00">14:00</button>
+                  <button type="button" class="btn btn-outline-secondary slot-btn" aria-pressed="false" data-slot="15:30">15:30</button>
+                  <button type="button" class="btn btn-outline-secondary slot-btn" aria-pressed="false" data-slot="17:00">17:00</button>
+                  <button type="button" class="btn btn-outline-secondary slot-btn" aria-pressed="false" data-slot="18:30">18:30</button>
                 </div>
               </div>
               <div class="col-md-6">
