@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a fictional demo appointment at BrightSmile Dental Care. Form posts to appointment.php on a PHP host; on static hosting it shows a labelled demo state.">
+  <title>Book a Visit — BrightSmile Dental Care</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top py-3">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><span class="logo-mark">🦷</span>BrightSmile</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services &amp; Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="doctors.html">Our Dentists</a></li>
+        <li class="nav-item"><a class="nav-link active" href="booking.html">Book a Visit</a></li>
+        <li class="nav-item ms-lg-2"><a class="btn btn-teal btn-sm px-4 py-2" href="booking.html">Book Appointment</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero py-5">
+  <div class="container position-relative">
+    <p class="section-kicker mb-1">Book a visit</p>
+    <h1 class="display-5 fw-bold">Book your appointment in two minutes.</h1>
+    <p class="lead text-muted" style="max-width: 640px;">Pick a treatment, a dentist, a date and a time slot. On a PHP host this form saves your booking and returns a confirmation reference; on this static demo it shows a clearly labelled demo state instead.</p>
+  </div>
+</header>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="row g-5">
+      <!-- FORM -->
+      <div class="col-lg-7 reveal">
+        <div class="card card-lift p-4 p-md-5">
+          <form id="booking-form" action="appointment.php" method="POST" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="treatment" class="form-label fw-semibold">Treatment *</label>
+                <select id="treatment" name="treatment" class="form-select" required>
+                  <option value="" selected disabled>Choose a treatment…</option>
+                  <option>Check-up &amp; Cleaning</option>
+                  <option>Teeth Whitening</option>
+                  <option>Fillings &amp; Restorations</option>
+                  <option>Clear Aligners Consultation</option>
+                  <option>Children's Dentistry</option>
+                  <option>Emergency Dental Care</option>
+                  <option>Root Canal Treatment</option>
+                  <option>Dental Implants Consultation</option>
+                </select>
+                <div class="invalid-feedback">Please choose a treatment.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="doctor" class="form-label fw-semibold">Dentist *</label>
+                <select id="doctor" name="doctor" class="form-select" required>
+                  <option value="" selected disabled>Choose a dentist…</option>
+                  <option value="first-available">First available</option>
+                  <option value="dr-chen">Dr. Maya Chen — General &amp; Cosmetic</option>
+                  <option value="dr-okafor">Dr. James Okafor — Orthodontics</option>
+                  <option value="dr-ramirez">Dr. Sofia Ramirez — Children's</option>
+                  <option value="dr-patel">Dr. Arjun Patel — Endodontics</option>
+                  <option value="dr-novak">Dr. Emily Novak — General</option>
+                  <option value="dr-obrien">Dr. Liam O'Brien — Emergency</option>
+                </select>
+                <div class="invalid-feedback">Please choose a dentist.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="date" class="form-label fw-semibold">Preferred date *</label>
+                <input type="date" id="date" name="date" class="form-control" required>
+                <div class="invalid-feedback">Please pick a date (today or later).</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Time slot *</label>
+                <input type="hidden" id="time" name="time" value="">
+                <div class="d-flex flex-wrap gap-2" role="group" aria-label="Time slots">
+                  <button type="button" class="btn btn-outline-secondary slot-btn" data-slot="09:00">09:00</button>
+                  <button type="button" class="btn btn-outline-secondary slot-btn" data-slot="10:30">10:30</button>
+                  <button type="button" class="btn btn-outline-secondary slot-btn" data-slot="12:00">12:00</button>
+                  <button type="button" class="btn btn-outline-secondary slot-btn" data-slot="14:00">14:00</button>
+                  <button type="button" class="btn btn-outline-secondary slot-btn" data-slot="15:30">15:30</button>
+                  <button type="button" class="btn btn-outline-secondary slot-btn" data-slot="17:00">17:00</button>
+                  <button type="button" class="btn btn-outline-secondary slot-btn" data-slot="18:30">18:30</button>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="name" class="form-label fw-semibold">Full name *</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="e.g. Alex Morgan" minlength="2" maxlength="80" required>
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="phone" class="form-label fw-semibold">Phone *</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="e.g. (555) 123-4567" pattern="[0-9+()\-.\s]{7,20}" required>
+                <div class="invalid-feedback">Please enter a valid phone number.</div>
+              </div>
+              <div class="col-12">
+                <label for="notes" class="form-label fw-semibold">Anything we should know? <span class="text-muted fw-normal">(optional)</span></label>
+                <textarea id="notes" name="notes" class="form-control" rows="3" maxlength="500" placeholder="e.g. Nervous about treatment, need ground-floor room…"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-teal w-100 mt-4 py-3">Book appointment</button>
+            <p class="text-muted small text-center mt-3 mb-0">Demo form — no real appointment is created and no data leaves your browser unless a PHP backend is connected.</p>
+          </form>
+          <div id="booking-result" class="d-none" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <!-- SIDE INFO -->
+      <div class="col-lg-5 reveal reveal-delay-1">
+        <div class="card card-lift p-4 mb-4">
+          <h5>How booking works</h5>
+          <ol class="text-muted mb-0">
+            <li class="mb-2">Choose a treatment and dentist above.</li>
+            <li class="mb-2">Pick a date and an available time slot.</li>
+            <li class="mb-2">Submit — on a PHP host, <code>appointment.php</code> validates your details, saves the booking to <code>data/appointments.json</code> and returns a confirmation reference.</li>
+            <li>On this static demo, you'll see a clearly labelled demo confirmation instead — nothing is saved.</li>
+          </ol>
+        </div>
+        <div class="card card-lift p-4 mb-4">
+          <h5>Opening hours</h5>
+          <ul class="list-unstyled text-muted mb-0">
+            <li class="d-flex justify-content-between"><span>Monday – Friday</span><strong>8:00 AM – 7:00 PM</strong></li>
+            <li class="d-flex justify-content-between"><span>Saturday</span><strong>9:00 AM – 2:00 PM</strong></li>
+            <li class="d-flex justify-content-between"><span>Sunday</span><strong>Closed</strong></li>
+          </ul>
+        </div>
+        <div class="card card-lift p-4">
+          <h5>Need urgent care?</h5>
+          <p class="text-muted mb-2">For toothache, swelling or a broken tooth, choose <strong>Emergency Dental Care</strong> — same-day slots are held every morning.</p>
+          <p class="mb-0"><strong>(555) 123-4567</strong> <span class="text-muted">(fictional number)</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h6 class="fw-bold">🦷 BrightSmile Dental Care</h6>
+        <p class="small">A fictional demo clinic built as a portfolio project. Not a real business — no real appointments are taken here.</p>
+      </div>
+      <div class="col-md-2">
+        <h6>Explore</h6>
+        <ul class="list-unstyled small">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services &amp; Pricing</a></li>
+          <li><a href="doctors.html">Our Dentists</a></li>
+          <li><a href="booking.html">Book a Visit</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6>Opening hours</h6>
+        <ul class="list-unstyled small">
+          <li>Mon – Fri: 8:00 AM – 7:00 PM</li>
+          <li>Saturday: 9:00 AM – 2:00 PM</li>
+          <li>Sunday: Closed</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6>Contact (fictional)</h6>
+        <ul class="list-unstyled small">
+          <li>123 Demo Street, Glassboro, NJ</li>
+          <li>(555) 123-4567</li>
+          <li>hello@brightsmile-demo.example</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-secondary my-4">
+    <p class="small text-center mb-0">© <span id="year"></span> BrightSmile Dental Care — fictional demo project. Built with HTML, CSS, JavaScript, Bootstrap 5 &amp; PHP.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/booking.js"></script>
+</body>
+</html>

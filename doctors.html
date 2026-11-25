@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet the fictional dentists of BrightSmile Dental Care — demo profiles for a portfolio project.">
+  <title>Our Dentists — BrightSmile Dental Care</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top py-3">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><span class="logo-mark">🦷</span>BrightSmile</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services &amp; Pricing</a></li>
+        <li class="nav-item"><a class="nav-link active" href="doctors.html">Our Dentists</a></li>
+        <li class="nav-item"><a class="nav-link" href="booking.html">Book a Visit</a></li>
+        <li class="nav-item ms-lg-2"><a class="btn btn-teal btn-sm px-4 py-2" href="booking.html">Book Appointment</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero py-5">
+  <div class="container position-relative">
+    <p class="section-kicker mb-1">Our dentists</p>
+    <h1 class="display-5 fw-bold">Meet the team behind the smiles.</h1>
+    <p class="lead text-muted" style="max-width: 640px;">All profiles on this page are fictional people created for this demo project — they illustrate the design, not real practitioners.</p>
+  </div>
+</header>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Dr. Maya Chen -->
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="card card-lift h-100">
+          <img src="https://picsum.photos/seed/dentist-chen/800/600" class="card-img-top doctor-img" alt="Portrait placeholder for Dr. Maya Chen (fictional)" loading="lazy">
+          <div class="card-body p-4">
+            <h5 class="mb-1">Dr. Maya Chen, DDS</h5>
+            <p class="text-muted small mb-3">Principal Dentist · General &amp; Cosmetic</p>
+            <p class="text-muted">Leads the practice and focuses on cosmetic dentistry, whitening and smile design. Known for explaining every step before she starts.</p>
+            <div><span class="chip">Cosmetic</span><span class="chip">Whitening</span><span class="chip">Veneers</span></div>
+            <a href="booking.html?doctor=dr-chen" class="btn btn-outline-teal btn-sm mt-3">Book with Dr. Chen →</a>
+          </div>
+        </div>
+      </div>
+      <!-- Dr. James Okafor -->
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+        <div class="card card-lift h-100">
+          <img src="https://picsum.photos/seed/dentist-okafor/800/600" class="card-img-top doctor-img" alt="Portrait placeholder for Dr. James Okafor (fictional)" loading="lazy">
+          <div class="card-body p-4">
+            <h5 class="mb-1">Dr. James Okafor, DDS</h5>
+            <p class="text-muted small mb-3">Orthodontist · Aligners &amp; Braces</p>
+            <p class="text-muted">Runs the orthodontics clinic — clear aligners, fixed braces and 3D smile previews for teens and adults.</p>
+            <div><span class="chip">Aligners</span><span class="chip">Braces</span><span class="chip">Teens</span></div>
+            <a href="booking.html?doctor=dr-okafor" class="btn btn-outline-teal btn-sm mt-3">Book with Dr. Okafor →</a>
+          </div>
+        </div>
+      </div>
+      <!-- Dr. Sofia Ramirez -->
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+        <div class="card card-lift h-100">
+          <img src="https://picsum.photos/seed/dentist-ramirez/800/600" class="card-img-top doctor-img" alt="Portrait placeholder for Dr. Sofia Ramirez (fictional)" loading="lazy">
+          <div class="card-body p-4">
+            <h5 class="mb-1">Dr. Sofia Ramirez, DMD</h5>
+            <p class="text-muted small mb-3">Paediatric Dentist · Children's Care</p>
+            <p class="text-muted">Makes first dental visits fun, not frightening. Specialises in gentle children's check-ups and preventive care.</p>
+            <div><span class="chip">Children</span><span class="chip">Prevention</span><span class="chip">Sealants</span></div>
+            <a href="booking.html?doctor=dr-ramirez" class="btn btn-outline-teal btn-sm mt-3">Book with Dr. Ramirez →</a>
+          </div>
+        </div>
+      </div>
+      <!-- Dr. Arjun Patel -->
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="card card-lift h-100">
+          <img src="https://picsum.photos/seed/dentist-patel/800/600" class="card-img-top doctor-img" alt="Portrait placeholder for Dr. Arjun Patel (fictional)" loading="lazy">
+          <div class="card-body p-4">
+            <h5 class="mb-1">Dr. Arjun Patel, MDS</h5>
+            <p class="text-muted small mb-3">Endodontist · Root Canals &amp; Implants</p>
+            <p class="text-muted">Handles complex root canal treatments and implant planning with a calm, pain-first approach.</p>
+            <div><span class="chip">Root canals</span><span class="chip">Implants</span><span class="chip">Surgery</span></div>
+            <a href="booking.html?doctor=dr-patel" class="btn btn-outline-teal btn-sm mt-3">Book with Dr. Patel →</a>
+          </div>
+        </div>
+      </div>
+      <!-- Dr. Emily Novak -->
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+        <div class="card card-lift h-100">
+          <img src="https://picsum.photos/seed/dentist-novak/800/600" class="card-img-top doctor-img" alt="Portrait placeholder for Dr. Emily Novak (fictional)" loading="lazy">
+          <div class="card-body p-4">
+            <h5 class="mb-1">Dr. Emily Novak, DDS</h5>
+            <p class="text-muted small mb-3">General Dentist · Hygiene &amp; Gum Care</p>
+            <p class="text-muted">Focuses on preventive care, gum health and the six-monthly check-up routine that keeps small problems small.</p>
+            <div><span class="chip">Check-ups</span><span class="chip">Gum care</span><span class="chip">Hygiene</span></div>
+            <a href="booking.html?doctor=dr-novak" class="btn btn-outline-teal btn-sm mt-3">Book with Dr. Novak →</a>
+          </div>
+        </div>
+      </div>
+      <!-- Dr. Liam O'Brien -->
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+        <div class="card card-lift h-100">
+          <img src="https://picsum.photos/seed/dentist-obrien/800/600" class="card-img-top doctor-img" alt="Portrait placeholder for Dr. Liam O'Brien (fictional)" loading="lazy">
+          <div class="card-body p-4">
+            <h5 class="mb-1">Dr. Liam O'Brien, DDS</h5>
+            <p class="text-muted small mb-3">Emergency &amp; Restorative Dentist</p>
+            <p class="text-muted">Covers the same-day emergency clinic — toothache, chips and lost fillings, sorted quickly and kindly.</p>
+            <div><span class="chip">Emergency</span><span class="chip">Fillings</span><span class="chip">Crowns</span></div>
+            <a href="booking.html?doctor=dr-obrien" class="btn btn-outline-teal btn-sm mt-3">Book with Dr. O'Brien →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="text-muted small mt-4">Note: these are fictional demo profiles with placeholder photos. No real dentists, credentials, or patient reviews are represented.</p>
+  </div>
+</section>
+
+<section class="pb-5">
+  <div class="container">
+    <div class="cta-band p-5 text-center reveal">
+      <h2 class="fw-bold">Found your dentist?</h2>
+      <p class="mb-4 opacity-75">Choose them on the booking form — or pick "First available" and we'll match you to the soonest slot.</p>
+      <a href="booking.html" class="btn btn-light btn-lg rounded-pill px-5 fw-semibold">Book an appointment →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h6 class="fw-bold">🦷 BrightSmile Dental Care</h6>
+        <p class="small">A fictional demo clinic built as a portfolio project. Not a real business — no real appointments are taken here.</p>
+      </div>
+      <div class="col-md-2">
+        <h6>Explore</h6>
+        <ul class="list-unstyled small">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services &amp; Pricing</a></li>
+          <li><a href="doctors.html">Our Dentists</a></li>
+          <li><a href="booking.html">Book a Visit</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6>Opening hours</h6>
+        <ul class="list-unstyled small">
+          <li>Mon – Fri: 8:00 AM – 7:00 PM</li>
+          <li>Saturday: 9:00 AM – 2:00 PM</li>
+          <li>Sunday: Closed</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6>Contact (fictional)</h6>
+        <ul class="list-unstyled small">
+          <li>123 Demo Street, Glassboro, NJ</li>
+          <li>(555) 123-4567</li>
+          <li>hello@brightsmile-demo.example</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-secondary my-4">
+    <p class="small text-center mb-0">© <span id="year"></span> BrightSmile Dental Care — fictional demo project. Built with HTML, CSS, JavaScript, Bootstrap 5 &amp; PHP.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

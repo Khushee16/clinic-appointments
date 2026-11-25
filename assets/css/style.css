@@ -1,0 +1,137 @@
+/* BrightSmile Dental Care — custom styles (Bootstrap 5 layered on top) */
+:root {
+  --teal: #0e7490;
+  --teal-dark: #155e75;
+  --teal-soft: #ecfeff;
+  --mint: #14b8a6;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --sand: #f8fafc;
+  --gold: #f59e0b;
+  --radius: 1rem;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background: #fff;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, .display-font { font-family: "Poppins", "Inter", sans-serif; }
+
+/* ---------- Navbar ---------- */
+.navbar-brand { font-family: "Poppins", sans-serif; font-weight: 700; letter-spacing: -.02em; }
+.navbar-brand .logo-mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px; border-radius: 12px;
+  background: linear-gradient(135deg, var(--teal), var(--mint));
+  color: #fff; font-size: 1.15rem; margin-right: .5rem;
+}
+.nav-link { font-weight: 500; color: var(--ink) !important; position: relative; }
+.nav-link::after {
+  content: ""; position: absolute; left: .5rem; right: .5rem; bottom: .15rem;
+  height: 2px; background: var(--mint); border-radius: 2px;
+  transform: scaleX(0); transform-origin: left; transition: transform .25s ease;
+}
+.nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
+.nav-link.active { color: var(--teal) !important; }
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(120deg, #ecfeff 0%, #f0fdfa 45%, #fff 100%);
+  padding: 5.5rem 0 4.5rem;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ""; position: absolute; width: 520px; height: 520px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(20,184,166,.18), transparent 65%);
+  top: -180px; right: -120px;
+}
+.hero-img {
+  border-radius: 1.5rem; box-shadow: 0 30px 60px -20px rgba(14,116,144,.35);
+  transform: rotate(1.5deg); transition: transform .5s ease;
+}
+.hero-img:hover { transform: rotate(0deg) scale(1.015); }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: .45rem;
+  background: #fff; border: 1px solid #cffafe; color: var(--teal-dark);
+  padding: .4rem .9rem; border-radius: 999px; font-size: .85rem; font-weight: 600;
+  box-shadow: 0 4px 14px rgba(14,116,144,.08);
+}
+.stat-num { font-family: "Poppins", sans-serif; font-size: 2rem; font-weight: 700; color: var(--teal); line-height: 1; }
+.stat-label { font-size: .85rem; color: var(--muted); }
+
+/* ---------- Buttons ---------- */
+.btn-teal {
+  background: linear-gradient(135deg, var(--teal), var(--mint));
+  border: none; color: #fff; font-weight: 600;
+  padding: .75rem 1.6rem; border-radius: 999px;
+  box-shadow: 0 10px 24px -8px rgba(14,116,144,.55);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.btn-teal:hover, .btn-teal:focus { color: #fff; transform: translateY(-2px); box-shadow: 0 16px 30px -8px rgba(14,116,144,.55); }
+.btn-outline-teal {
+  border: 2px solid var(--teal); color: var(--teal); font-weight: 600;
+  padding: .7rem 1.5rem; border-radius: 999px; transition: all .2s ease;
+}
+.btn-outline-teal:hover { background: var(--teal); color: #fff; }
+
+/* ---------- Cards ---------- */
+.card-lift {
+  border: 1px solid #e2e8f0; border-radius: var(--radius);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  overflow: hidden;
+}
+.card-lift:hover { transform: translateY(-6px); box-shadow: 0 24px 48px -16px rgba(15,23,42,.18); border-color: #99f6e4; }
+.icon-tile {
+  width: 56px; height: 56px; border-radius: 16px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; color: #fff;
+  background: linear-gradient(135deg, var(--teal), var(--mint));
+}
+.price-tag { font-family: "Poppins", sans-serif; font-size: 1.6rem; font-weight: 700; color: var(--teal); }
+.price-tag small { font-size: .85rem; color: var(--muted); font-weight: 400; }
+
+.doctor-img { height: 260px; object-fit: cover; transition: transform .5s ease; }
+.card-lift:hover .doctor-img { transform: scale(1.05); }
+.chip {
+  display: inline-block; background: var(--teal-soft); color: var(--teal-dark);
+  font-size: .78rem; font-weight: 600; padding: .25rem .7rem; border-radius: 999px; margin: 0 .25rem .35rem 0;
+}
+
+/* ---------- Sections ---------- */
+.section-pad { padding: 4.5rem 0; }
+.section-kicker {
+  text-transform: uppercase; letter-spacing: .14em; font-size: .78rem;
+  font-weight: 700; color: var(--mint);
+}
+.section-title { font-weight: 700; letter-spacing: -.02em; }
+.bg-soft { background: var(--sand); }
+.cta-band {
+  background: linear-gradient(120deg, var(--teal-dark), var(--teal) 60%, var(--mint));
+  border-radius: 1.5rem; color: #fff;
+}
+
+/* ---------- Scroll reveal ---------- */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+.reveal-delay-1 { transition-delay: .12s; }
+.reveal-delay-2 { transition-delay: .24s; }
+
+/* ---------- Forms ---------- */
+.form-control, .form-select { border-radius: .75rem; padding: .7rem 1rem; border: 1.5px solid #e2e8f0; }
+.form-control:focus, .form-select:focus { border-color: var(--mint); box-shadow: 0 0 0 .25rem rgba(20,184,166,.15); }
+.slot-btn { border-radius: 999px; font-weight: 600; }
+.slot-btn.active { background: var(--teal); border-color: var(--teal); color: #fff; }
+
+/* ---------- Footer ---------- */
+footer { background: var(--ink); color: #cbd5e1; }
+footer a { color: #cbd5e1; text-decoration: none; }
+footer a:hover { color: #fff; }
+footer h6 { color: #fff; }
+
+@media (max-width: 767px) {
+  .hero { padding: 3.5rem 0 3rem; }
+  .stat-num { font-size: 1.6rem; }
+}
